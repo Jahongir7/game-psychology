@@ -29,17 +29,21 @@ const Home = ({ setResultText }) => {
   };
 
   return (
+    <div className="text-center">
+        <h3 className="text-5xl mt-3">Temperamentni aniqlash metodikasi</h3>
+ <p className="text-3xl text-gray-500 my-10">       Quyidagi mul’tfilm qahramonliridan birini tanlang?</p>
     <div className="grid grid-cols-2 gap-4 p-6" style={{display: "flex", cursor:"pointer"}}>
       {data.map((item, index) => (
-        <div
+          <div
           key={index}
           className="cursor-pointer"
           onClick={() => handleClick(item.text)}
-        >
+          >
           <img src={item.image} alt={`Option ${index + 1}`} width={300} className="rounded shadow-lg w-[300px]" />
         </div>
       ))}
     </div>
+      </div>
   );
 };
 
